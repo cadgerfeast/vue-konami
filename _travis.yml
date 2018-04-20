@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "node"
+deploy:
+  provider: npm
+  email: j2pichon@gmail.com
+  api_key: $NPM_TOKEN
+before_script:
+  npm run test
+script:
+  npm run build
