@@ -35,6 +35,7 @@ var Konami = {
       el.__vueKonami__.timeout = timeout
     },
     unbind (el, binding) {
+      clearTimeout(el.__vueKonami__.timeoutEl)
       document.removeEventListener('keydown', el.__vueKonami__.handler)
       el.__vueKonami__ = null
     }
