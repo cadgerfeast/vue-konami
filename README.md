@@ -39,7 +39,7 @@ Alternativelly you can reference the script and the stylesheet in your HTML:
 Simplest usage:
 
 ``` html
-<div v-konami="callback"><div>
+<div v-konami="callback"></div>
 ```
 
 Advanced usage:
