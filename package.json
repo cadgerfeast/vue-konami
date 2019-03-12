@@ -1,6 +1,6 @@
 {
   "name": "vue-konami",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/vue-konami.min.js",
   "scripts": {
     "build": "npm run build:min",

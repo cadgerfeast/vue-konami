@@ -22,6 +22,7 @@ Vue.use(VueKonami)
 ```
 
 Alternativelly you can reference the script in your HTML:
+
 ``` html
 <script src="path/to/vue-konami.min.js"></script>
 <!-- CDN -->
