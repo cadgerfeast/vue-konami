@@ -1,18 +1,10 @@
 # Vue Konami
 
-<p align="center">A simple, yet totally indispensable directive for Vue.js applications.</p>
-
-<p align="center">
-  <a href="https://travis-ci.org/j2pichon/vue-konami">
-    <img src="https://travis-ci.org/j2pichon/vue-konami.svg?branch=master" alt="Build Status">
-  </a>
-  <a href="https://www.npmjs.com/package/vue-konami">
-    <img src="https://img.shields.io/npm/dt/vue-konami.svg" alt="Downloads">
-  </a>
-  <a href="https://www.npmjs.com/package/vue-konami">
-    <img src="https://img.shields.io/npm/l/vue-konami.svg" alt="License">
-  </a>
-</p>
+[![Version](https://badge.fury.io/js/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
+[![Build](https://travis-ci.org/d-kalh/vue-konami.svg?branch=master)](https://travis-ci.org/d-kalh/vue-konami)
+[![Downloads](https://img.shields.io/npm/dt/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
+[![Coverage Status](https://coveralls.io/repos/github/d_kalh/vue-konami/badge.svg?branch=master)](https://coveralls.io/github/d_kalh/vue-konami?branch=master)
+[![License](https://img.shields.io/npm/l/vue-konami.svg)](https://github.com/d_kalh/vue-konami)
 
 ## Installation
 
@@ -29,9 +21,11 @@ import VueKonami from 'vue-konami'
 Vue.use(VueKonami)
 ```
 
-Alternativelly you can reference the script and the stylesheet in your HTML:
+Alternativelly you can reference the script in your HTML:
 ``` html
 <script src="path/to/vue-konami.min.js"></script>
+<!-- CDN -->
+<script src="https://unpkg.com/vue-konami"></script>
 ```
 
 ## Usage
@@ -53,6 +47,7 @@ export default {
     return {
       opts: {
         timeout: 3000,
+        // A-Z-E-R-T-Y
         chain: '65-90-69-82-84-89'
       }
     }
