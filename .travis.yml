@@ -9,3 +9,4 @@ deploy:
   provider: npm
   email: d_kalh@snetch.io
   api_key: $NPM_TOKEN
+  skip_cleanup: true
