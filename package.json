@@ -5,8 +5,9 @@
   "scripts": {
     "build": "npm run build:min",
     "build:min": "cross-env NODE_ENV=production webpack --config config/webpack.config.min.js --progress --hide-modules",
+    "lint": "eslint src/**/*",
     "test": "jest",
-    "coveralls": "npm run test && cat ./coverage/lcov.info | coveralls"
+    "coveralls": "npm run lint && npm run test && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [
     "vue",
@@ -18,7 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/d_kalh/vue-konami.git"
+    "url": "git+https://github.com/d-kalh/vue-konami.git"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
