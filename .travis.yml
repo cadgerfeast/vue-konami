@@ -7,6 +7,6 @@ script:
   npm run build
 deploy:
   provider: npm
-  email: d_kalh@snetch.io
+  email: contact@cadgerfeast.com
   api_key: $NPM_TOKEN
   skip_cleanup: true

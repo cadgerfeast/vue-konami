@@ -1,10 +1,10 @@
 # Vue Konami
 
 [![Version](https://badge.fury.io/js/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
-[![Build](https://travis-ci.org/d-kalh/vue-konami.svg?branch=master)](https://travis-ci.org/d-kalh/vue-konami)
+[![Build](https://travis-ci.org/cadgerfeast/vue-konami.svg?branch=master)](https://travis-ci.org/cadgerfeast/vue-konami)
 [![Downloads](https://img.shields.io/npm/dt/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
-[![Coverage Status](https://coveralls.io/repos/github/d-kalh/vue-konami/badge.svg?branch=master)](https://coveralls.io/github/d-kalh/vue-konami?branch=master)
-[![License](https://img.shields.io/npm/l/vue-konami.svg)](https://github.com/d-kalh/vue-konami/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/cadgerfeast/vue-konami/badge.svg?branch=master)](https://coveralls.io/github/cadgerfeast/vue-konami?branch=master)
+[![License](https://img.shields.io/npm/l/vue-konami.svg)](https://github.com/cadgerfeast/vue-konami/blob/master/LICENSE)
 
 ## Installation
 

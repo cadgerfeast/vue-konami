@@ -1,6 +1,6 @@
 {
   "name": "vue-konami",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/vue-konami.min.js",
   "scripts": {
     "build": "npm run build:min",
@@ -15,11 +15,11 @@
     "konami",
     "vue-konami"
   ],
-  "author": "Jérémie Pichon <d_kalh@snetch.io>",
+  "author": "Jérémie Pichon <contact@cadgerfeast.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/d-kalh/vue-konami.git"
+    "url": "git+https://github.com/cadgerfeast/vue-konami.git"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
