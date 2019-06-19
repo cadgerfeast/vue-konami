@@ -69,6 +69,29 @@ Available options:
 | timeout  | Time the user have to type the chain      | `3000`                                   |
 | chain    | The chain (KeyCodes separated by hyphens) | `38-38-40-40-37-39-37-39-66-65` (Konami) |
 
+## Contributors
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/cadgerfeast">
+          <img src="https://github.com/cadgerfeast.png?size=100" alt="cadgerfeast" width="100px">
+          <br/>
+          <span>cadgerfeast</span>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Aterbonus">
+          <img src="https://github.com/Aterbonus.png?size=100" alt="Aterbonus" width="100px">
+          <br/>
+          <span>Aterbonus</span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## License
 
 MIT
