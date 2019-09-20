@@ -1,10 +1,12 @@
 {
   "name": "vue-konami",
   "version": "1.0.6",
-  "main": "dist/vue-konami.min.js",
+  "browser": "dist/vue-konami.umd.js",
+  "main": "dist/vue-konami.cjs.js",
   "scripts": {
-    "build": "npm run build:min",
-    "build:min": "cross-env NODE_ENV=production webpack --config config/webpack.config.min.js --progress --hide-modules",
+    "build": "npm run build:umd && npm run build:cjs",
+    "build:umd": "cross-env NODE_ENV=production webpack --config config/webpack.config.umd.js --progress --hide-modules",
+    "build:cjs": "cross-env NODE_ENV=production webpack --config config/webpack.config.cjs.js --progress --hide-modules",
     "lint": "eslint src/**/*",
     "test": "jest",
     "coveralls": "npm run lint && npm run test && cat ./coverage/lcov.info | coveralls"
@@ -22,11 +24,11 @@
     "url": "git+https://github.com/cadgerfeast/vue-konami.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.3.4",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^24.5.0",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.6",
     "coveralls": "^3.0.3",
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1",

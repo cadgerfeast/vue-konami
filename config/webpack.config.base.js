@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const config = require('../package.json')
 
@@ -8,7 +9,6 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: './src/index.js',
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
@@ -34,5 +34,18 @@ module.exports = {
     new webpack.DefinePlugin({
       'VERSION': JSON.stringify(config.version)
     })
-  ]
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        uglifyOptions: {
+          compress: false,
+          ecma: 6,
+          mangle: true
+        }
+      })
+    ]
+  }
 }

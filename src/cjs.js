@@ -6,7 +6,3 @@ function VueKonami (Vue, options) {
   }
 }
 export default VueKonami
-
-if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(VueKonami)
-}

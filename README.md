@@ -21,12 +21,12 @@ import VueKonami from 'vue-konami'
 Vue.use(VueKonami)
 ```
 
-Alternativelly you can reference the script in your HTML:
+Alternatively you can reference the script in your HTML:
 
 ``` html
-<script src="path/to/vue-konami.min.js"></script>
+<script src="path/to/vue-konami.umd.js"></script>
 <!-- CDN -->
-<script src="https://unpkg.com/vue-konami"></script>
+<script src="https://unpkg.com/vue-konami/dist/vue-konami.umd.js"></script>
 ```
 
 ## Usage
