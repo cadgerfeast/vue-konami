@@ -15,8 +15,8 @@ let vnode = {
 describe('index.js', () => {
   beforeEach(() => {
     el = document.createElement('div');
-    jest.spyOn(document, 'addEventListener').and.callThrough();
-    jest.spyOn(window, 'clearTimeout').and.callThrough();
+    jest.spyOn(document, 'addEventListener');
+    jest.spyOn(window, 'clearTimeout');
   });
   it('should import', () => {
     expect(Konami.name).toBe('konami');
@@ -28,7 +28,7 @@ describe('index.js', () => {
     expect(el.__vueKonami__.timeout).toEqual(defaultTimeout);
   });
   it('should bind - custom empty - should be default', () => {
-    jest.spyOn(console, 'warn').and.callThrough();
+    jest.spyOn(console, 'warn').mockImplementation(() => { return; });
     binding = {
       ...binding,
       arg: 'dummy',
@@ -67,7 +67,7 @@ describe('index.js', () => {
   it('should call handler', async (done) => {
     const keyCode = 38;
     const event = new KeyboardEvent('keydown', {'keyCode': keyCode});
-    jest.spyOn(binding, 'value').and.callThrough();
+    jest.spyOn(binding, 'value');
     Konami.options.bind(el, binding, vnode);
     document.dispatchEvent(event);
     expect(window.clearTimeout).toHaveBeenCalled();
@@ -84,7 +84,7 @@ describe('index.js', () => {
     }, defaultTimeout + 100);
   });
   it('should unbind', () => {
-    jest.spyOn(document, 'removeEventListener').and.callThrough();
+    jest.spyOn(document, 'removeEventListener');
     const timeoutEl = null;
     const handler = null;
     el.__vueKonami__ = {

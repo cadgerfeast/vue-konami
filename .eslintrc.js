@@ -5,17 +5,18 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    browser: true,
-    jest: true,
-    node: true
+    'browser': true,
+    'jest/globals': true,
+    'node': true
   },
   extends: 'eslint:recommended',
   plugins: [
-    'html'
+    'html',
+    'jest'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
+    'no-debugger': 'off',
     'indent': ['error', 2, {'SwitchCase': 1}],
     'eol-last': ['error', 'always'],
     'linebreak-style': ['error', 'unix'],
