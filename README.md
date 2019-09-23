@@ -24,6 +24,9 @@ Vue.use(VueKonami)
 Alternatively you can reference the script in your HTML:
 
 ``` html
+<!-- VueJS -->
+<script src="https://unpkg.com/vue"></script>
+<!-- VueKonami -->
 <script src="path/to/vue-konami.umd.js"></script>
 <!-- CDN -->
 <script src="https://unpkg.com/vue-konami"></script>

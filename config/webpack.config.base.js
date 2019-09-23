@@ -1,11 +1,11 @@
-const path = require('path')
-const webpack = require('webpack')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const config = require('../package.json')
+const config = require('../package.json');
 
 function resolve (dir) {
-  return path.join(__dirname, '..', dir)
+  return path.join(__dirname, '..', dir);
 }
 
 module.exports = {
@@ -48,4 +48,4 @@ module.exports = {
       })
     ]
   }
-}
+};

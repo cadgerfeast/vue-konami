@@ -6,14 +6,23 @@ module.exports = {
   },
   env: {
     browser: true,
-    jest: true
+    jest: true,
+    node: true
   },
-  extends: 'standard',
+  extends: 'eslint:recommended',
   plugins: [
     'html'
   ],
   rules: {
-    'generator-star-spacing': 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  }
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'indent': ['error', 2, {'SwitchCase': 1}],
+    'eol-last': ['error', 'always'],
+    'linebreak-style': ['error', 'unix'],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always'],
+    'arrow-parens': ['error', 'always'],
+    'arrow-body-style': ['error', 'always'],
+    'curly': ['error', 'all']
+  },
 }

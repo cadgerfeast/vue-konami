@@ -1,6 +1,6 @@
-const merge = require('webpack-merge')
-const base = require('./webpack.config.base')
-const path = require('path')
+const merge = require('webpack-merge');
+const base = require('./webpack.config.base');
+const path = require('path');
 
 module.exports = merge(base, {
   mode: 'production',
@@ -8,7 +8,6 @@ module.exports = merge(base, {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'vue-konami.cjs.js',
-    library: 'VueKonami',
-    libraryTarget: 'commonjs'
+    libraryTarget: 'commonjs2'
   }
-})
+});

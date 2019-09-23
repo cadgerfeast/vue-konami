@@ -1,8 +1,9 @@
-import Directives from './directives'
+import Directives from './directives';
 
-function VueKonami (Vue, options) {
+export function VueKonami (Vue) {
   for (var directive in Directives) {
-    Vue.directive(Directives[directive].name, Directives[directive].options)
+    Vue.directive(Directives[directive].name, Directives[directive].options);
   }
 }
-export default VueKonami
+
+export default VueKonami;

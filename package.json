@@ -8,7 +8,7 @@
     "build": "npm run build:umd && npm run build:cjs",
     "build:umd": "cross-env NODE_ENV=production webpack --config config/webpack.config.umd.js --progress --hide-modules",
     "build:cjs": "cross-env NODE_ENV=production webpack --config config/webpack.config.cjs.js --progress --hide-modules",
-    "lint": "eslint src/**/*",
+    "lint": "eslint src/**/* test/**/*",
     "test": "jest",
     "coveralls": "npm run lint && npm run test && cat ./coverage/lcov.info | coveralls"
   },
