@@ -5,7 +5,11 @@ const Konami = {
       const handler = function (e) {
         el.__vueKonami__.value += e.keyCode + '-';
         if (el.__vueKonami__.value.includes(el.__vueKonami__.target)) {
-          binding.value(e);
+          if (!binding.value) {
+            el.dispatchEvent(new Event('konami'));
+          } else {
+            binding.value(e);
+          }
           el.__vueKonami__.value = '';
         }
         clearTimeout(el.__vueKonami__.timeoutEl);

@@ -1,6 +1,6 @@
 {
   "name": "vue-konami",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "unpkg": "dist/vue-konami.umd.js",
   "browser": "dist/vue-konami.umd.js",
   "main": "dist/vue-konami.cjs.js",

@@ -64,6 +64,20 @@ describe('index.js', () => {
     expect(el.__vueKonami__.target).toEqual(vnode.context.dummy.chain + '-');
     expect(el.__vueKonami__.timeout).toEqual(vnode.context.dummy.timeout);
   });
+  it('should dispatch konami event', async (done) => {
+    el.addEventListener('konami', () => {
+      done();
+    });
+    const keyCode = 38;
+    const event = new KeyboardEvent('keydown', {'keyCode': keyCode});
+    jest.spyOn(binding, 'value');
+    Konami.options.bind(el, { modifiers: {} }, vnode);
+    document.dispatchEvent(event);
+    expect(window.clearTimeout).toHaveBeenCalled();
+    expect(el.__vueKonami__.value).toEqual(keyCode + '-');
+    el.__vueKonami__.value = konamiCode;
+    document.dispatchEvent(event);
+  });
   it('should call handler', async (done) => {
     const keyCode = 38;
     const event = new KeyboardEvent('keydown', {'keyCode': keyCode});

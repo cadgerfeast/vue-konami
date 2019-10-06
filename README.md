@@ -37,7 +37,7 @@ Alternatively you can reference the script in your HTML:
 Simplest usage:
 
 ``` html
-<div v-konami="callback"></div>
+<div v-konami="myMethod"></div>
 ```
 
 Advanced usage:
@@ -59,6 +59,25 @@ export default {
   methods: {
     easterEgg () {
       console.log('I\'m a totally useful easter egg.')
+    }
+  }
+}
+</script>
+```
+
+VueJS directives does not support literal expressions.
+If you do not want to have a method inside your Vue component, you can use VueKonami this way:
+
+``` html
+<!-- Method -->
+<div v-konami @konami="showEasterEgg = !showEasterEgg"></div>
+<div v-if="showEasterEgg">My super EasterEgg</div>
+<script>
+export default {
+  name: 'Konami',
+  data () {
+    return {
+      showEasterEgg: false
     }
   }
 }
