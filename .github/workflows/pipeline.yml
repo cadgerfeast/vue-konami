@@ -16,13 +16,15 @@ jobs:
       run: npm ci
     - name: Lint
       run: npm run lint
-    - name: Build
-      run: npm run build
+    - name: Test
+      run: npm run test
     - name: Sonar
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    - name: Build
+      run: npm run build
     - name: Publish
       run: npm publish --access public
       env:
