@@ -1,6 +1,6 @@
 {
   "name": "vue-konami",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "unpkg": "dist/vue-konami.umd.js",
   "browser": "dist/vue-konami.umd.js",
   "main": "dist/vue-konami.cjs.js",
@@ -41,7 +41,7 @@
     "eslint-plugin-standard": "3.0.1",
     "jest": "24.9.0",
     "uglifyjs-webpack-plugin": "1.2.5",
-    "webpack": "4.6.0",
+    "webpack": "4.43.0",
     "webpack-cli": "3.3.9",
     "webpack-merge": "4.1.2"
   }
