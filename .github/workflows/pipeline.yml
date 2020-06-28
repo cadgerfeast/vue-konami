@@ -42,3 +42,10 @@ jobs:
         fi
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    - name: Domain
+      run: echo "vue-konami.cadgerfeast.dev" > "./dist/docs/CNAME"
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./dist/docs
