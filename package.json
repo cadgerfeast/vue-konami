@@ -1,5 +1,6 @@
 {
   "name": "vue-konami",
+  "description": "The indispensable directive for VueJS",
   "version": "1.0.10",
   "unpkg": "dist/vue-konami.umd.js",
   "browser": "dist/vue-konami.umd.js",
@@ -9,13 +10,13 @@
     "dev:lib:umd": "webpack --watch --config config/webpack.config.umd.js --progress --hide-modules",
     "dev:lib:cjs": "webpack --watch --config config/webpack.config.cjs.js --progress --hide-modules",
     "dev:docs": "madoc dev",
+    "lint": "eslint src/**/* test/**/*",
+    "test": "jest",
     "build": "run-s build:umd build:cjs build:docs",
     "build:umd": "webpack --config config/webpack.config.umd.js --progress --hide-modules",
     "build:cjs": "webpack --config config/webpack.config.cjs.js --progress --hide-modules",
     "build:docs": "madoc build",
-    "serve:docs": "madoc serve",
-    "lint": "eslint src/**/* test/**/*",
-    "test": "jest"
+    "serve": "madoc serve"
   },
   "keywords": [
     "vue",
@@ -36,8 +37,8 @@
   "devDependencies": {
     "@babel/core": "7.6.0",
     "@babel/preset-env": "7.6.0",
-    "@madoc/component-repl": "0.0.5",
-    "@madoc/core": "0.0.13",
+    "@madoc/core": "0.0.16",
+    "@madoc/component-repl": "0.0.7",
     "babel-eslint": "8.2.3",
     "babel-jest": "24.5.0",
     "babel-loader": "8.0.6",
@@ -52,10 +53,10 @@
     "eslint-plugin-standard": "3.0.1",
     "jest": "24.9.0",
     "npm-run-all": "4.1.5",
-    "svelte": "3.21.0",
     "uglifyjs-webpack-plugin": "1.2.5",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.9",
     "webpack-merge": "4.1.2"
-  }
+  },
+  "dependencies": {}
 }

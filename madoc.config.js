@@ -1,14 +1,15 @@
+const pkg = require('./package.json');
+
 module.exports = {
-  dist: 'dist/docs',
-  watch: [
-    './src/**/*'
+  title: 'Vue Konami',
+  description: pkg.description,
+  distPath: '.docs',
+  components: [
+    require('@madoc/component-repl')
   ],
-  static: [
-    {
-      src: './dist/vue-konami.umd.js'
-    },
-    {
-      src: './.madoc/static'
-    }
+  // TODO watch folders
+  assets: [
+    { src: 'dist/vue-konami.umd.js' },
+    { src: 'assets' }
   ]
 };
