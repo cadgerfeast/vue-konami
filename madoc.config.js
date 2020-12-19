@@ -7,7 +7,9 @@ module.exports = {
   components: [
     require('@madoc/component-repl')
   ],
-  // TODO watch folders
+  watch: [
+    'dist'
+  ],
   assets: [
     { src: 'dist/vue-konami.umd.js' },
     { src: 'assets' }

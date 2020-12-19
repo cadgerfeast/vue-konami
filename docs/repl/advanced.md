@@ -3,4 +3,4 @@ title: Vue Konami - Advanced
 ---
 # Advanced
 
-[Repl](./advanced/metadata.md)
+<Repl metadata="./advanced/metadata.md"></Repl>

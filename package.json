@@ -37,8 +37,8 @@
   "devDependencies": {
     "@babel/core": "7.6.0",
     "@babel/preset-env": "7.6.0",
-    "@madoc/core": "0.0.16",
-    "@madoc/component-repl": "0.0.7",
+    "@madoc/core": "0.0.19",
+    "@madoc/component-repl": "0.0.8",
     "babel-eslint": "8.2.3",
     "babel-jest": "24.5.0",
     "babel-loader": "8.0.6",

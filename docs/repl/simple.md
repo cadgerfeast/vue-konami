@@ -3,4 +3,4 @@ title: Vue Konami - Simple
 ---
 # Simple
 
-[Repl](./simple/metadata.md)
+<Repl metadata="./simple/metadata.md"></Repl>
