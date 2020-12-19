@@ -356,8 +356,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/assets/vue.min.js"
   },
   {
-    "revision": "6f5ecfae5fa7b3c53aae",
-    "url": "/css/chunk-vendors.38687c82.css"
+    "revision": "bf01584c8d86454c1c67",
+    "url": "/css/chunk-vendors.f9146a91.css"
   },
   {
     "revision": "378c0f72294f66e2d2fecd22f31e6233",
@@ -604,7 +604,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/css/roboto/roboto-900.woff2"
   },
   {
-    "revision": "bf3f42d1a2fec32d3a9b791f07f8bacf",
+    "revision": "1277731e3f0ce2b7201446371c27208c",
     "url": "/index.html"
   },
   {
@@ -612,8 +612,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/app.2e95aba4.js"
   },
   {
-    "revision": "6f5ecfae5fa7b3c53aae",
-    "url": "/js/chunk-vendors.8dd4da9d.js"
+    "revision": "bf01584c8d86454c1c67",
+    "url": "/js/chunk-vendors.ddf3ae8e.js"
   },
   {
     "revision": "824017e495fe9c6276365800df994371",
