@@ -21,8 +21,19 @@ jobs:
         with:
           node-version: "14.15.4"
           registry-url: "https://registry.npmjs.org"
+      - name: Cache
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-konami-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
       - name: Install
-        run: npm ci
+        run: npm install
       - name: Lint
         run: npm run lint
       - name: Test
@@ -51,6 +62,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Status
+        run: git status
       - name: Release
         if: ${{github.event_name == 'push' && steps.env.outputs.SHOULD_RELEASE == 'true'}}
         run: npx release-it --ci --verbose --disable-metrics --increment=${{steps.env.outputs.VERSION}}
