@@ -1,11 +1,15 @@
 # Changelog
 
-## [1.0.11](https://github.com/cadgerfeast/vue-konami/compare/1.0.12...1.0.11)
+## [1.1.0](https://github.com/cadgerfeast/vue-konami/compare/1.0.11...1.1.0)
 
-- fix release-it configuration file name [`7e408c9`](https://github.com/cadgerfeast/vue-konami/commit/7e408c9e25f20cebd36070df9bc1f3a10e80bb67)
-- bump version 1.0.11 [`d992be8`](https://github.com/cadgerfeast/vue-konami/commit/d992be882fab11098060e60ba60fed4f0cd07da7)
+- debug pipeline [`1a9e48a`](https://github.com/cadgerfeast/vue-konami/commit/1a9e48a9a960ef71e77fcfc901d6134bcf7b2948)
+- fix pipeline, remove scannerwork files [`5f28089`](https://github.com/cadgerfeast/vue-konami/commit/5f28089740b3724bb1265459e0271b337c6acc44)
+- fix pipeline typo [`45b3843`](https://github.com/cadgerfeast/vue-konami/commit/45b38433dc6d240a3f1186d0fe1283b90fc2a8a0)
+- update workflow [`55f1db0`](https://github.com/cadgerfeast/vue-konami/commit/55f1db0e9fc811dc41a8da1dedd768a9d0d5a09c)
+- bump version 1.1.0 [`4f74ebe`](https://github.com/cadgerfeast/vue-konami/commit/4f74ebe354b90114aab3546a24d7d3ed5c19e86f)
+- bump version 1.0.12 [`895dd17`](https://github.com/cadgerfeast/vue-konami/commit/895dd17233b7203538fecd702519e925f68c219f)
 
-## 1.0.12 (2021-01-21)
+## 1.0.11 (2021-01-21)
 
 - fix: clear timeout on unbind [`#2`](https://github.com/cadgerfeast/vue-konami/pull/2)
 - fix: missing slash in documentation [`#1`](https://github.com/cadgerfeast/vue-konami/pull/1)
@@ -21,6 +25,7 @@
 - adding cjs2 build, minor fixes [`e59bd3d`](https://github.com/cadgerfeast/vue-konami/commit/e59bd3d2e34f2229e77d4133a56074f8832b25ae)
 - modify pipeline, bump v 1.0.11 [`0ba07aa`](https://github.com/cadgerfeast/vue-konami/commit/0ba07aa51f7bf7e8c5e85905a8af307eb35474ce)
 - sonarcloud and github action migration [`9c22394`](https://github.com/cadgerfeast/vue-konami/commit/9c2239473385c3937cbecf5221be369b17aee822)
+- Release vue-konami@1.0.11 [`dce6611`](https://github.com/cadgerfeast/vue-konami/commit/dce6611182bb84a13b75941c59de074128ffb083)
 - adding support of literal expressions [`de1d115`](https://github.com/cadgerfeast/vue-konami/commit/de1d11593dabd1f21980ab0f4a5264a8d754f505)
 - fix pipeline [`58251c6`](https://github.com/cadgerfeast/vue-konami/commit/58251c68d0c5a145d397d634e168103bb4ac64a7)
 - adding github action pipeline [`c19b8e8`](https://github.com/cadgerfeast/vue-konami/commit/c19b8e8dbe820b729e3ec5c48131ab1362fb556a)
@@ -31,6 +36,7 @@
 - Adding package files [`6ab4915`](https://github.com/cadgerfeast/vue-konami/commit/6ab4915f1671df20f649a635f1818e1ca286f131)
 - upgrading madoc dependency [`74f3c18`](https://github.com/cadgerfeast/vue-konami/commit/74f3c18f15b93f4af5d470c0f3a99fed69c1e40c)
 - adding gh-pages publish in pipeline [`2573995`](https://github.com/cadgerfeast/vue-konami/commit/2573995012a4492e55626052a62df4bc3966e836)
+- fix release-it configuration file name [`7e408c9`](https://github.com/cadgerfeast/vue-konami/commit/7e408c9e25f20cebd36070df9bc1f3a10e80bb67)
 - Release 1.0.12 [`9cbba76`](https://github.com/cadgerfeast/vue-konami/commit/9cbba76efc1cce8af20f17dd7e728c957d873c48)
 - adding test step, renaming sonar project file [`e94519a`](https://github.com/cadgerfeast/vue-konami/commit/e94519a44d08ce0507a8d220e72e2bae283165aa)
 - tempo remove dist folder in gitignore [`3b69186`](https://github.com/cadgerfeast/vue-konami/commit/3b6918608bfd42b31d22b53d59acf77fc1e1ea0d)
@@ -39,6 +45,7 @@
 - add linting [`13ca69d`](https://github.com/cadgerfeast/vue-konami/commit/13ca69d78dfddc414544dacbce281a1f239a4aa3)
 - adding npm registry setup [`2fe510a`](https://github.com/cadgerfeast/vue-konami/commit/2fe510a83b3d36bf18d7666e1a4adb647c2c5425)
 - skipping cleanup [`c48ef6e`](https://github.com/cadgerfeast/vue-konami/commit/c48ef6e891d8ed6fad167d5fdfceeadf104c7699)
+- bump version 1.0.11 [`d992be8`](https://github.com/cadgerfeast/vue-konami/commit/d992be882fab11098060e60ba60fed4f0cd07da7)
 - do not trigger on pull requests [`2f1749e`](https://github.com/cadgerfeast/vue-konami/commit/2f1749e9245295f0c1a6abf368c45d64763aa3b7)
 - publishing v1.0.8 [`41806b8`](https://github.com/cadgerfeast/vue-konami/commit/41806b8140b53acd6fa315f8c6a3cf394dd53989)
 - renaming repo token [`b10360e`](https://github.com/cadgerfeast/vue-konami/commit/b10360e778a9c77838aa4657858de3e4330cd76b)
