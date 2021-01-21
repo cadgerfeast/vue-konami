@@ -2,6 +2,7 @@
   "git": {
     "requireBranch": "master",
     "addUntrackedFiles": true,
+    "requireCleanWorkingDir": false,
     "commitMessage": "Release vue-konami@${version}",
     "changelog": "npx auto-changelog --hide-credit --package --stdout --commit-limit false --unreleased --template ./devops/changelog/release.hbs"
   },

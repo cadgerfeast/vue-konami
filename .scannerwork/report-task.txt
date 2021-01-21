@@ -1,7 +1,0 @@
-organization=cadgerfeast-github
-projectKey=cadgerfeast_vue-konami
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.16462
-dashboardUrl=https://sonarcloud.io/dashboard?id=cadgerfeast_vue-konami&branch=master
-ceTaskId=AXckkxvCS01vBmjMSUMi
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXckkxvCS01vBmjMSUMi
