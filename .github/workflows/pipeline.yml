@@ -4,48 +4,65 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'Release vue-konami@')"
+    runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-        registry-url: 'https://registry.npmjs.org'
-    - name: Install
-      run: npm ci
-    - name: Lint
-      run: npm run lint
-    - name: Test
-      run: npm run test
-    - name: Fix Coverage Paths
-      working-directory: ./coverage
-      run: |
-        sed -i 's/\/home\/runner\/work\/vue-konami\/vue-konami\//\/github\/workspace\//g' lcov.info
-        sed -i 's/\/home\/runner\/work\/vue-konami\/vue-konami\//\/github\/workspace\//g' clover.xml
-    - name: Sonar
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Build
-      run: npm run build
-    - name: Publish
-      run: |
-        LATEST=`npm view . version`
-        CURRENT=`cat package.json | jq -r .version`
-        if [ "$LATEST" != "$CURRENT" ]
-        then
-          npm publish
-        fi
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-    - name: Domain
-      run: echo "vue-konami.cadgerfeast.dev" > "./.docs/CNAME"
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.ACCESS_TOKEN }}
-        publish_dir: ./.docs
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "14.15.4"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test
+      - name: Fix Coverage Paths
+        if: github.event_name == 'push'
+        working-directory: ./coverage
+        run: |
+          sed -i 's/\/home\/runner\/work\/vue-konami\/vue-konami\//\/github\/workspace\//g' lcov.info
+          sed -i 's/\/home\/runner\/work\/vue-konami\/vue-konami\//\/github\/workspace\//g' clover.xml
+      - name: Build
+        run: npm run build
+      - name: Sonar
+        if: github.event_name == 'push'
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Get Version
+        if: github.event_name == 'push'
+        id: version
+        run: |
+          VERSION=$(jq .version -r ./package.json)
+          echo $VERSION
+          echo ::set-output name=VERSION::$VERSION
+      - name: Release
+        if: github.event_name == 'push'
+        run: npx release-it --ci --disable-metrics --increment=${{steps.version.outputs.VERSION}}
+        env:
+          GIT_AUTHOR_NAME: Github Action
+          GIT_AUTHOR_EMAIL: action@github.com
+          GIT_COMMITTER_NAME: Github Action
+          GIT_COMMITTER_EMAIL: action@github.com
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Domain
+        if: github.event_name == 'push'
+        run: echo "vue-konami.cadgerfeast.dev" > "./.docs/CNAME"
+      - name: Deploy
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./.docs

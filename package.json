@@ -1,7 +1,7 @@
 {
   "name": "vue-konami",
   "description": "The indispensable directive for VueJS",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "unpkg": "dist/vue-konami.umd.js",
   "browser": "dist/vue-konami.umd.js",
   "main": "dist/vue-konami.cjs.js",
@@ -33,6 +33,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cadgerfeast/vue-konami.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cadgerfeast/vue-konami/issues",
+    "email": "contact@cadgerfeast.com"
   },
   "devDependencies": {
     "@babel/core": "7.6.0",
