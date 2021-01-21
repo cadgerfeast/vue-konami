@@ -1,7 +1,7 @@
 {
   "name": "vue-konami",
   "description": "The indispensable directive for VueJS",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "unpkg": "dist/vue-konami.umd.js",
   "browser": "dist/vue-konami.umd.js",
   "main": "dist/vue-konami.cjs.js",
