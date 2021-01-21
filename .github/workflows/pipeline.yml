@@ -40,19 +40,19 @@ jobs:
             echo ::set-output name=SHOULD_RELEASE::true
           fi
       - name: Fix Coverage Paths
-        if: github.event_name == 'push' && ${{steps.env.outputs.SHOULD_RELEASE}} == 'true'
+        if: ${{github.event_name == 'push' && steps.version.outputs.SHOULD_RELEASE == 'true'}}
         working-directory: ./coverage
         run: |
           sed -i 's/\/home\/runner\/work\/vue-konami\/vue-konami\//\/github\/workspace\//g' lcov.info
           sed -i 's/\/home\/runner\/work\/vue-konami\/vue-konami\//\/github\/workspace\//g' clover.xml
       - name: Sonar
-        if: github.event_name == 'push' && ${{steps.env.outputs.SHOULD_RELEASE}} == 'true'
+        if: ${{github.event_name == 'push' && steps.version.outputs.SHOULD_RELEASE == 'true'}}
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Release
-        if: github.event_name == 'push' && ${{steps.env.outputs.SHOULD_RELEASE}} == 'true'
+        if: ${{github.event_name == 'push' && steps.version.outputs.SHOULD_RELEASE == 'true'}}
         run: npx release-it --ci --verbose --disable-metrics --increment=${{steps.env.outputs.VERSION}}
         env:
           GIT_AUTHOR_NAME: Github Action
