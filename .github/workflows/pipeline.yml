@@ -36,8 +36,8 @@ jobs:
           CURRENT=`cat package.json | jq -r .version`
           if [ "$LATEST" != "$CURRENT" ]
           then
-            echo '::set-output name=VERSION::$CURRENT'
-            echo '::set-output name=SHOULD_RELEASE::true'
+            echo ::set-output name=VERSION::$CURRENT
+            echo ::set-output name=SHOULD_RELEASE::true
           fi
       - name: Fix Coverage Paths
         if: github.event_name == 'push' && ${{steps.env.outputs.SHOULD_RELEASE}} == 'true'
@@ -53,7 +53,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Release
         if: github.event_name == 'push' && ${{steps.env.outputs.SHOULD_RELEASE}} == 'true'
-        run: npx release-it --ci --disable-metrics --increment=${{steps.env.outputs.VERSION}}
+        run: npx release-it --ci --verbose --disable-metrics --increment=${{steps.env.outputs.VERSION}}
         env:
           GIT_AUTHOR_NAME: Github Action
           GIT_AUTHOR_EMAIL: action@github.com
