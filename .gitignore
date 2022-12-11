@@ -1,5 +1,6 @@
 /.docs
 /.scannerwork
-/dist
 /coverage
+/dist
+/public/assets/vue-konami.umd.js
 /node_modules

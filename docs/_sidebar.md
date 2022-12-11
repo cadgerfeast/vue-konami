@@ -1,7 +1,12 @@
 ---
-links:
-  - title: Simple
-    path: /repl/simple
-  - title: Advanced
-    path: /repl/advanced
+model:
+  - name: Home
+    path: /
+  - name: Usage
+    path: /usage/simple
+    children:
+      - name: Simple
+        path: /usage/simple
+      - name: Advanced
+        path: /usage/advanced
 ---

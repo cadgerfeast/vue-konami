@@ -1,0 +1,23 @@
+{
+  "height": "600px",
+  "width": "80%",
+  "projects": [
+    {
+      "template": "./template.html",
+      "files": [
+        {
+          "name": "Body",
+          "path": "./body.html",
+          "lang": "html",
+          "tpl": "<!-- Body -->"
+        },
+        {
+          "name": "Script",
+          "path": "./script.js",
+          "lang": "javascript",
+          "tpl": "// Script"
+        }
+      ]
+    }
+  ]
+}
