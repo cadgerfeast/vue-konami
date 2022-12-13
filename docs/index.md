@@ -1,7 +1,7 @@
 ---
 title: Vue Konami
 ---
-# Vue Konami
+# vue-konami
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cadgerfeast_vue-konami&metric=alert_status)](https://sonarcloud.io/dashboard?id=cadgerfeast_vue-konami)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cadgerfeast_vue-konami&metric=coverage)](https://sonarcloud.io/dashboard?id=cadgerfeast_vue-konami)
@@ -101,14 +101,14 @@ Available options:
     <tr>
       <td align="center">
         <a href="https://github.com/cadgerfeast">
-          <img src="https://github.com/cadgerfeast.png?size=100" alt="cadgerfeast" width="100px">
+          <img src="https://github.com/cadgerfeast.png?size=100" alt="cadgerfeast" width="100px" style="min-width: 100px">
           <br/>
           <span>cadgerfeast</span>
         </a>
       </td>
       <td align="center">
         <a href="https://github.com/Aterbonus">
-          <img src="https://github.com/Aterbonus.png?size=100" alt="Aterbonus" width="100px">
+          <img src="https://github.com/Aterbonus.png?size=100" alt="Aterbonus" width="100px" style="min-width: 100px">
           <br/>
           <span>Aterbonus</span>
         </a>
