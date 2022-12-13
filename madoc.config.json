@@ -1,9 +1,7 @@
 {
   "description": "Vue Konami",
   "docsDir": "./docs",
+  "addonsDir": "./addons",
   "publicDir": "./public",
-  "distDir": "./.docs",
-  "addons": [
-    "@madoc/component-repl"
-  ]
+  "distDir": "./.docs"
 }

@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 const config = require('../package.json');
 
@@ -26,15 +25,6 @@ module.exports = {
     new ESLintPlugin(),
     new webpack.DefinePlugin({
       'VERSION': JSON.stringify(config.version)
-    }),
-    new FileManagerPlugin({
-      events: {
-        onEnd: {
-          copy: [
-            { source: path.resolve(__dirname, '../dist/vue-konami.umd.js'), destination: path.resolve(__dirname, '../public/assets/vue-konami.umd.js') }
-          ]
-        }
-      }
     })
   ],
   optimization: {

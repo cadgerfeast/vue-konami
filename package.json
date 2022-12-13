@@ -39,6 +39,8 @@
     "email": "contact@cadgerfeast.com"
   },
   "devDependencies": {
+    "@madoc/core": "../madoc-core",
+    "@madoc/component-repl": "../madoc-component-repl",
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "babel-eslint": "^8.2.3",
