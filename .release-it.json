@@ -1,8 +1,9 @@
 {
   "git": {
+    "requireCleanWorkingDir": false,
     "requireBranch": "master",
     "addUntrackedFiles": true,
-    "requireCleanWorkingDir": false,
+    "pushArgs": ["--follow-tags", "--force"],
     "commitMessage": "Release vue-konami@${version}",
     "changelog": "npx auto-changelog --hide-credit --package --stdout --commit-limit false --unreleased --template ./devops/changelog/release.hbs"
   },
