@@ -1,0 +1,7 @@
+{
+  "description": "Vue Konami",
+  "docsDir": "./docs",
+  "addonsDir": "./addons",
+  "publicDir": "./public",
+  "distDir": "./.docs"
+}
