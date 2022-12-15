@@ -64,7 +64,7 @@ describe('index.js', () => {
     expect(el.__vueKonami__.target).toEqual(vnode.context.dummy.chain + '-');
     expect(el.__vueKonami__.timeout).toEqual(vnode.context.dummy.timeout);
   });
-  it('should dispatch konami event', async (done) => {
+  it('should dispatch konami event', (done) => {
     el.addEventListener('konami', () => {
       done();
     });
@@ -78,7 +78,7 @@ describe('index.js', () => {
     el.__vueKonami__.value = konamiCode;
     document.dispatchEvent(event);
   });
-  it('should call handler', async (done) => {
+  it('should call handler', (done) => {
     const keyCode = 38;
     const event = new KeyboardEvent('keydown', {'keyCode': keyCode});
     jest.spyOn(binding, 'value');

@@ -10,13 +10,13 @@
     "dev:lib:umd": "webpack --watch --config config/webpack.config.umd.js --progress --hide-modules",
     "dev:lib:cjs": "webpack --watch --config config/webpack.config.cjs.js --progress --hide-modules",
     "dev:docs": "madoc dev",
-    "lint": "eslint src/**/* test/**/*",
-    "test": "jest",
     "build": "run-s build:umd build:cjs build:docs",
     "build:umd": "webpack --config config/webpack.config.umd.js --progress --hide-modules",
     "build:cjs": "webpack --config config/webpack.config.cjs.js --progress --hide-modules",
     "build:docs": "madoc build",
-    "preview": "madoc preview"
+    "preview": "madoc preview",
+    "test": "jest",
+    "lint": "eslint src/**/* test/**/*"
   },
   "keywords": [
     "vue",
@@ -39,10 +39,10 @@
     "email": "contact@cadgerfeast.com"
   },
   "devDependencies": {
-    "@madoc/core": "../madoc-core",
-    "@madoc/component-repl": "../madoc-component-repl",
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
+    "@madoc/component-repl": "^0.1.0",
+    "@madoc/core": "^0.1.7",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.6",
@@ -55,6 +55,7 @@
     "eslint-webpack-plugin": "^3.2.0",
     "filemanager-webpack-plugin": "^8.0.0",
     "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "npm-run-all": "^4.1.5",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.1.0",
