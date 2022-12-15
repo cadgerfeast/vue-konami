@@ -7,12 +7,12 @@
   "main": "dist/vue-konami.cjs.js",
   "scripts": {
     "dev": "run-p dev:lib:umd dev:lib:cjs dev:docs",
-    "dev:lib:umd": "webpack --watch --config config/webpack.config.umd.js --progress --hide-modules",
-    "dev:lib:cjs": "webpack --watch --config config/webpack.config.cjs.js --progress --hide-modules",
+    "dev:lib:umd": "webpack --watch --config config/webpack.config.umd.js --progress",
+    "dev:lib:cjs": "webpack --watch --config config/webpack.config.cjs.js --progress",
     "dev:docs": "madoc dev",
     "build": "run-s build:umd build:cjs build:docs",
-    "build:umd": "webpack --config config/webpack.config.umd.js --progress --hide-modules",
-    "build:cjs": "webpack --config config/webpack.config.cjs.js --progress --hide-modules",
+    "build:umd": "webpack --config config/webpack.config.umd.js --progress",
+    "build:cjs": "webpack --config config/webpack.config.cjs.js --progress",
     "build:docs": "madoc build",
     "preview": "madoc preview",
     "test": "jest",
@@ -59,7 +59,7 @@
     "npm-run-all": "^4.1.5",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.1.0",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^5.0.1",
     "webpack-merge": "^4.1.2"
   }
 }
