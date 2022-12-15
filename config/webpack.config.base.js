@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const config = require('../package.json');
@@ -22,7 +21,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ESLintPlugin(),
     new webpack.DefinePlugin({
       'VERSION': JSON.stringify(config.version)
     })

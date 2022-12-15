@@ -9,6 +9,7 @@ module.exports = {
     'browser': true,
     'node': true
   },
+  plugins: ['jest'],
   extends: 'eslint:recommended',
   rules: {
     'no-console': 'off',
