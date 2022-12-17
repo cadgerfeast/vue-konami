@@ -1,5 +1,5 @@
 {
-  "description": "Vue Konami",
+  "description": "The indispensable directive for VueJS",
   "docsDir": "./docs",
   "addonsDir": "./addons",
   "publicDir": "./public",
