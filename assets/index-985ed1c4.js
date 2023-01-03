@@ -35,6 +35,10 @@ title: Vue Konami
 [![Downloads](https://img.shields.io/npm/dt/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
 [![License](https://img.shields.io/npm/l/vue-konami.svg)](https://github.com/cadgerfeast/vue-konami/blob/master/LICENSE)
 
+<p align="center"><br/><img width="200" src="https://vue-konami.cadgerfeast.dev/icons/vue-konami.svg" alt="Vue Konami Icon"/><br/><br/></p>
+
+> The indispensable directive for VueJS
+
 ## Installation
 
 \`\`\` bash
