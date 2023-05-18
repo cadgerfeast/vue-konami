@@ -2,32 +2,11 @@
   "name": "vue-konami",
   "description": "The indispensable directive for VueJS",
   "version": "1.2.0",
-  "unpkg": "dist/vue-konami.umd.js",
-  "browser": "dist/vue-konami.umd.js",
-  "main": "dist/vue-konami.cjs.js",
-  "scripts": {
-    "dev": "run-p dev:lib:umd dev:lib:cjs dev:docs",
-    "dev:lib:umd": "webpack --watch --config config/webpack.config.umd.js --progress",
-    "dev:lib:cjs": "webpack --watch --config config/webpack.config.cjs.js --progress",
-    "dev:docs": "madoc dev",
-    "build": "run-s build:*",
-    "build:lib": "run-p build:lib:*",
-    "build:lib::umd": "webpack --config config/webpack.config.umd.js --progress",
-    "build:lib:cjs": "webpack --config config/webpack.config.cjs.js --progress",
-    "build:docs": "madoc build",
-    "preview": "madoc preview",
-    "test": "jest",
-    "lint": "eslint src/**/* test/**/*"
-  },
   "keywords": [
     "vue",
     "vuejs",
     "konami",
     "vue-konami"
-  ],
-  "files": [
-    "dist/vue-konami.cjs.js",
-    "dist/vue-konami.umd.js"
   ],
   "author": "Jérémie Pichon <contact@cadgerfeast.com>",
   "license": "MIT",
@@ -39,28 +18,51 @@
     "url": "https://github.com/cadgerfeast/vue-konami/issues",
     "email": "contact@cadgerfeast.com"
   },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "unpkg": "./dist/index.umd.cjs",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:lib": "vite build --watch",
+    "dev:types": "vue-tsc -p tsconfig.dts.json --watch",
+    "dev:docs": "madoc dev",
+    "build": "run-s build:*",
+    "build:lib": "vite build",
+    "build:types": "vue-tsc -p tsconfig.dts.json",
+    "build:docs": "madoc build",
+    "preview": "madoc preview",
+    "test": "vitest",
+    "lint": "eslint ./addons ./src ./test"
+  },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@madoc/component-repl": "^0.1.1",
     "@madoc/core": "^0.1.8",
-    "babel-eslint": "^8.2.3",
-    "babel-jest": "^24.5.0",
-    "babel-loader": "^8.0.6",
-    "eslint": "^7.0.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jest": "^27.1.6",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "filemanager-webpack-plugin": "^8.0.0",
-    "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1",
+    "@madoc/component-repl": "^0.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitest/coverage-c8": "^0.25.8",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/test-utils": "^2.2.3",
+    "eslint": "^8.28.0",
+    "eslint-plugin-vue": "^9.7.0",
+    "jsdom": "^20.0.2",
     "npm-run-all": "^4.1.5",
-    "terser-webpack-plugin": "^5.3.6",
-    "webpack": "^5.1.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-merge": "^4.1.2"
+    "typescript": "^4.6.4",
+    "vite": "^4.0.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^0.25.8",
+    "vue": "^3.3.2",
+    "vue-tsc": "^1.0.9"
   }
 }
