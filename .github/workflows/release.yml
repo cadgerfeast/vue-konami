@@ -33,7 +33,7 @@ jobs:
     - name: Install
       run: npm ci
     - name: Build
-      run: npm run build:lib
+      run: npm run build:dist && npm run build:types
     - name: Release
       run: npx release-it@14.6.2 --ci --verbose --disable-metrics --increment=${{github.event.inputs.version}}
       env:
