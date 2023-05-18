@@ -3,7 +3,7 @@ import * as vite from 'vite';
 import * as path from 'path';
 import vue from '@vitejs/plugin-vue';
 
-const dev = process.env.npm_lifecycle_event === 'dev:lib';
+const madoc = ['dev:madoc', 'build:madoc'].includes(process.env.npm_lifecycle_event);
 
 const config = {
   publicDir: false,
@@ -38,7 +38,7 @@ const config = {
   }
 };
 
-export default vite.defineConfig(dev ? {
+export default vite.defineConfig(madoc ? {
   ...config,
   build: {
     ...config.build,

@@ -3,4 +3,4 @@
 /coverage
 /dist
 /node_modules
-/public/assets
+/public/assets/vue-konami.js
