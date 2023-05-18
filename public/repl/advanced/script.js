@@ -1,12 +1,19 @@
-new Vue({
-  el: '#app',
-  data () {
+import { createApp } from 'vue';
+import { vKonami } from 'vue-konami';
+
+createApp({
+  setup () {
     return {
-      opts: {
-        timeout: 3000,
-        // A-Z-E-R-T-Y
-        chain: '65-90-69-82-84-89'
+      easterEgg: {
+        timeout: 500,
+        chain: ['A', 'Z', 'E', 'R', 'T', 'Y'],
+        callback: () => {
+          alert('easterEgg');
+        }
       }
     };
+  },
+  directives: {
+    konami: vKonami
   }
-});
+}).mount('#app')
