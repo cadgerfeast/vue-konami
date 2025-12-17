@@ -1,18 +1,16 @@
 # vue-konami
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=cadgerfeast_vue-konami&metric=alert_status)](https://sonarcloud.io/dashboard?id=cadgerfeast_vue-konami)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=cadgerfeast_vue-konami&metric=coverage)](https://sonarcloud.io/dashboard?id=cadgerfeast_vue-konami)
 [![Version](https://badge.fury.io/js/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
 [![Downloads](https://img.shields.io/npm/dt/vue-konami.svg)](https://www.npmjs.com/package/vue-konami)
 [![License](https://img.shields.io/npm/l/vue-konami.svg)](https://github.com/cadgerfeast/vue-konami/blob/master/LICENSE)
 
-<p align="center"><br/><img width="200" src="https://vue-konami.cadgerfeast.dev/icons/vue-konami.svg" alt="Vue Konami Icon"/><br/><br/></p>
+<p align="center"><br/><img width="200" src="https://vue-konami.cadgerfeast.com/icons/vue-konami.svg" alt="Vue Konami Icon"/><br/><br/></p>
 
 > The indispensable directive for VueJS
 
 ## Documentation
 
-[Full documentation website can be found here.](https://vue-konami.cadgerfeast.dev)
+[Full documentation website can be found here.](https://vue-konami.cadgerfeast.com)
 
 > If targeting Vue2, please read [Legacy docs](./DOCS.md#vue2-legacy)
 
